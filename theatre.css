@@ -1,5 +1,6 @@
-body{
+body, html{
     width: 100vw;
+    height: 100vh;
     font-family: "Nunito Sans", sans-serif;
     margin: 0;
 }
@@ -17,17 +18,25 @@ nav p{
     display: inline;
     margin-left: 10vw;
     margin-right: 20vw;
+    font-weight: bold;
+    font-size: 1.5em;
+    ;
 }
 
 nav{
     background: black;
     color: white;
     height: 50px;
+    padding-top: 2vh;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
 }
 
 #heroimage{
-    width: 100vw;
-    height: 100vh;
+    height: 50vh;
     background-image: url(./hero_image.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,22 +51,138 @@ nav{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 4em;
+    width: 100vw;
+    text-align: center;
 }
 
-#container1{
+/* Main grid */
+
+main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-    ". . showinfo . ."
-
+    ". date date date ."
+    ". actors showinfo readmore ."
+    ". actors2 showinfo2 readmore2 ."
+    ". actors3 showinfo3 readmore3 ."
+    ". actors4 showinfo4 readmore4 .";
 }
 
-#container2{
-
+main a{
+    text-decoration: none;
+    background-color: goldenrod;
+    color: white;
+    height: 7vh;
+    width: 10vw;
+    text-align: center;
+    line-height: 7vh;
+    margin: auto;
+    font-size: 1.2em;
 }
 
-#container1 h2{
+main img{
+    height: 25vh;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2vw;
+}
+
+main ul li:first-child{
+    font-size: 1.5em;
+}
+
+main li{
+    margin-bottom: 2vh;
+}
+
+#date{
+    grid-area: date;
+    padding-left: 3vw;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+#actors{
+    grid-area: actors;
+}
+
+#showinfo{
+    list-style-type: none;
     grid-area: showinfo;
 }
 
+#readmore{
+    grid-area: readmore;
+}
+
+#actors2{
+    grid-area: actors2;
+}
+
+#showinfo2{
+    list-style-type: none;
+    grid-area: showinfo2;
+}
+
+#readmore2{
+    grid-area: readmore2;
+}
+
+#actors3{
+    grid-area: actors3;
+}
+
+#showinfo3{
+    list-style-type: none;
+    grid-area: showinfo3;
+}
+
+#readmore3{
+    grid-area: readmore3;
+}
+
+#actors4{
+    grid-area: actors4;
+}
+
+#showinfo4{
+    list-style-type: none;
+    grid-area: showinfo4;
+}
+
+#readmore4{
+    grid-area: readmore4;
+}
+
+/* Footer grid */
+
+#container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "map info shows social"
+}
+
+#container2 img{
+    grid-area: map;
+    width: 20vw;
+}
+
+#container2 li{
+    list-style-type: none;
+}
+
+#container2#info{
+    grid-area: info;
+}
+
+#container2#shows{
+    grid-area: shows;
+}
+
+#container2#social{
+    grid-area: social;
+}
