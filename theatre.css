@@ -1,0 +1,43 @@
+body{
+    width: 100vw
+}
+
+#container1{
+    grid-area: container1;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "theater nav_links ."
+    "heroimage . ."
+}
+
+#container2{
+    grid-area: container2;
+}
+
+#container3{
+    grid-area: container3;
+}
+
+nav ul{
+    grid-area: nav_links;
+    display: inline;
+}
+
+nav ul{
+    display: inline;
+}
+
+nav h1{
+    grid-area: theater;
+    display: inline;
+}
+
+#heroimage{
+    grid-area: hero;
+}
+
+#heroimage img{
+    width: 100vw;
+}
