@@ -1,43 +1,63 @@
 body{
-    width: 100vw
+    width: 100vw;
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
 }
 
-#container1{
-    grid-area: container1;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "theater nav_links ."
-    "heroimage . ."
-}
-
-#container2{
-    grid-area: container2;
-}
-
-#container3{
-    grid-area: container3;
-}
-
-nav ul{
-    grid-area: nav_links;
+nav li{
     display: inline;
+    margin-right: 2vw;
 }
 
 nav ul{
     display: inline;
 }
 
-nav h1{
-    grid-area: theater;
+nav p{
     display: inline;
+    margin-left: 10vw;
+    margin-right: 20vw;
+}
+
+nav{
+    background: black;
+    color: white;
+    height: 50px;
 }
 
 #heroimage{
-    grid-area: hero;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./hero_image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-#heroimage img{
-    width: 100vw;
+#herotext{
+    margin: 0;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+#container1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". . showinfo . ."
+
+}
+
+#container2{
+
+}
+
+#container1 h2{
+    grid-area: showinfo;
+}
+
