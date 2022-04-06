@@ -1,9 +1,11 @@
 body, html{
-    width: 100vw;
     height: 100vh;
     font-family: "Nunito Sans", sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
+
+/* Navbar */
 
 nav li{
     display: inline;
@@ -56,7 +58,7 @@ nav a{
     text-align: center;
 }
 
-/* Main grid */
+/* Main */
 
 main{
     display: grid;
@@ -65,9 +67,15 @@ main{
     grid-template-areas:
     ". date date date ."
     ". actors showinfo readmore ."
+    ". line1 line1 line1 ."
     ". actors2 showinfo2 readmore2 ."
+    ". line2 line2 line2 ."
     ". actors3 showinfo3 readmore3 ."
+    ". line3 line3 line3 ."
     ". actors4 showinfo4 readmore4 .";
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    row-gap: 5vh;
 }
 
 main a{
@@ -80,6 +88,7 @@ main a{
     line-height: 7vh;
     margin: auto;
     font-size: 1.2em;
+    border: 1px solid black;
 }
 
 main img{
@@ -95,6 +104,27 @@ main ul li:first-child{
 
 main li{
     margin-bottom: 2vh;
+}
+
+#line1{
+    grid-area: line1;
+    background-color: black;
+    height: 1px;
+    border: none;
+}
+
+#line2{
+    grid-area: line2;
+    background-color: black;
+    height: 1px;
+    border: none;
+}
+
+#line3{
+    grid-area: line3;
+    background-color: black;
+    height: 1px;
+    border: none;
 }
 
 #date{
@@ -156,33 +186,46 @@ main li{
     grid-area: readmore4;
 }
 
-/* Footer grid */
+/* Footer */
 
-#container2{
+footer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: black;
+    color: white;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
     "map info shows social"
 }
 
-#container2 img{
+footer img{
     grid-area: map;
-    width: 20vw;
+    width: 25vw;
+    margin: auto;
 }
 
-#container2 li{
+footer li{
     list-style-type: none;
+    margin-bottom: 3vh;
 }
 
-#container2#info{
+footer h3{
+    font-size: 2em;
+}
+
+#info{
     grid-area: info;
 }
-
-#container2#shows{
+#shows{
     grid-area: shows;
 }
 
-#container2#social{
+#social{
     grid-area: social;
+}
+
+.material-icons-outlined{
+    color: goldenrod;
+    position: relative;
+    top: 1vh;
 }
